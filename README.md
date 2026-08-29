@@ -19,7 +19,6 @@ Presentation → Domain/UseCases → Repository Protocol → Data Repository
   <img src="Screenshots/docupdate-2.png" width="180">
   <img src="Screenshots/docupdate-3.png" width="180">
   <img src="Screenshots/docupdate-4.png" width="180">
-  <img src="Screenshots/docupdate-5.png" width="180">
 </p>
 
 ## Key Features
