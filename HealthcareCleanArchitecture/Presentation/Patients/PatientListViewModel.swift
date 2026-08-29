@@ -1,0 +1,2 @@
+import Foundation
+@MainActor final class PatientListViewModel { enum State { case idle, loading, loaded([Patient]), failed(String) }; var onState:((State)->Void)?; private let useCase:FetchPatientsUseCaseProtocol; init(useCase:FetchPatientsUseCaseProtocol){self.useCase = useCase}; func load(){onState?(.loading); Task{ [weak self] in guard let self else{return}; do{onState?(.loaded(try await useCase.execute()))}catch{onState?(.failed(error.localizedDescription))}}} }

@@ -1,0 +1,2 @@
+import Foundation
+final class MockPatientRepository: PatientRepository { func patients() async throws -> [Patient] { try await Task.sleep(nanoseconds: 350_000_000); return [Patient(id:UUID(),name:"Ayesha Khan",age:34,condition:"Hypertension",lastVisit:"Aug 27"),Patient(id:UUID(),name:"Daniel Reed",age:52,condition:"Diabetes",lastVisit:"Aug 25"),Patient(id:UUID(),name:"Sophia Lee",age:29,condition:"Asthma",lastVisit:"Aug 20")] } }
